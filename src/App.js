@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-
+import Hero from './components/Hero/Hero';
+import InfoSection from './components/InfoSection/InfoSection';
+import Slider from './components/InfoSection/Slider';
+import { SliderData } from './Data/SliderData';
+// import { InfoDataOne, InfoDataTwo } from './Data/InfoData';
+import { InfoData } from './Data/InfoData';
+// import NavBar from './components/Navbar/NavBar.js';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Hero />
+      <InfoSection infoData={InfoData}/>
+      {/* <InfoSection infoData={InfoDataTwo}/> */}
+      {/* <Slider slides={SliderData} /> */}
+    </Router>
   );
 }
 
